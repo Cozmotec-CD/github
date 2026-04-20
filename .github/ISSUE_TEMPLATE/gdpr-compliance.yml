@@ -1,0 +1,151 @@
+name: "GDPR Compliance Checklist"
+description: "Complete this checklist to ensure GDPR compliance for this repository"
+title: "[GDPR] Compliance Checklist"
+labels: ["compliance", "gdpr", "security"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## GDPR Compliance Checklist
+        Ensure this repository aligns with the General Data Protection Regulation (GDPR).
+
+        Tick all applicable items. If something does not apply, explain why in the final section.
+
+  - type: checkboxes
+    id: data_identification
+    attributes:
+      label: Data Identification & Classification
+      options:
+        - label: Repository reviewed for handling personal data (email, IP, user IDs, cookies)
+        - label: All personal data fields are documented
+        - label: Sensitive data (if any) is identified and flagged
+
+  - type: checkboxes
+    id: lawful_basis
+    attributes:
+      label: Lawful Basis & Purpose Limitation
+      options:
+        - label: Lawful basis for processing is defined
+        - label: Data is only used for intended purpose
+        - label: No unintended or secondary data usage
+
+  - type: checkboxes
+    id: minimisation
+    attributes:
+      label: Data Minimisation & Normalisation
+      options:
+        - label: Only minimum necessary data is collected
+        - label: Duplicate storage of personal data is avoided
+        - label: Data is normalised (no redundant copies across systems)
+        - label: Aggregated/anonymised data used where possible
+
+  - type: checkboxes
+    id: security
+    attributes:
+      label: Storage & Security
+      options:
+        - label: Data encrypted in transit (HTTPS/TLS)
+        - label: Sensitive data encrypted at rest
+        - label: Passwords hashed securely (bcrypt, argon2, etc.)
+        - label: No secrets stored in code or committed files
+        - label: Logs do not contain sensitive data
+
+  - type: checkboxes
+    id: database
+    attributes:
+      label: Database Access & Controls
+      options:
+        - label: Least privilege access enforced
+        - label: Role-based access control implemented
+        - label: Credentials securely managed (not hardcoded)
+        - label: Database access logging enabled
+        - label: Production DB access restricted and monitored
+
+  - type: checkboxes
+    id: retention
+    attributes:
+      label: Data Retention & Deletion
+      options:
+        - label: Data retention policy defined
+        - label: Old/unused data is deleted automatically where possible
+        - label: User data deletion (Right to Erasure) supported
+        - label: Backups covered by retention policies
+
+  - type: checkboxes
+    id: user_rights
+    attributes:
+      label: User Rights Handling
+      options:
+        - label: Users can access their data
+        - label: Users can correct their data
+        - label: Users can export their data
+        - label: These processes are implemented and tested
+
+  - type: checkboxes
+    id: consent
+    attributes:
+      label: Consent & Tracking
+      options:
+        - label: User consent collected where required
+        - label: Users can withdraw consent easily
+        - label: Cookies/tracking documented
+        - label: Non-essential tracking disabled until consent
+
+  - type: checkboxes
+    id: third_party
+    attributes:
+      label: Third-Party Sharing
+      options:
+        - label: Third-party services documented
+        - label: Data sharing minimized and justified
+        - label: Data Processing Agreements (DPAs) in place
+        - label: Third parties reviewed for compliance
+
+  - type: checkboxes
+    id: breach
+    attributes:
+      label: Breach Detection & Response
+      options:
+        - label: Monitoring for data breaches exists
+        - label: Incident response process defined
+        - label: Breach reporting within 72 hours feasible
+        - label: Logs support incident investigation
+
+  - type: checkboxes
+    id: logging
+    attributes:
+      label: Logging, Monitoring & Testing
+      options:
+        - label: Security logs enabled
+        - label: Logs protected from unauthorized access
+        - label: Regular security/privacy checks performed
+        - label: Privacy risks reviewed during development
+
+  - type: checkboxes
+    id: dev_practices
+    attributes:
+      label: Development Best Practices
+      options:
+        - label: Privacy by design applied
+        - label: Test data is anonymized or synthetic
+        - label: No personal data used in dev/staging
+        - label: Code reviews include data exposure checks
+
+  - type: checkboxes
+    id: documentation
+    attributes:
+      label: Documentation & Ownership
+      options:
+        - label: Data flow documented
+        - label: Processing activities recorded
+        - label: GDPR owner assigned
+        - label: Checklist reviewed periodically
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes / Exceptions
+      description: Provide details for any unchecked items or exceptions
+      placeholder: Explain gaps, risks, or why items are not applicable
